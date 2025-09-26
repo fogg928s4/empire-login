@@ -1,0 +1,91 @@
+/* Login y elementos*/
+/* pagina principal y main container*/
+
+
+/* Banner */
+.welcome-banner {
+    width: 100%;
+}
+.welcome-banner img {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 100%;
+    
+}
+
+/* login form */
+.login {
+    background-color: #ddd;
+    /*border: 5px #5a0c33 dashed;*/
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 100%;
+}
+.login *{
+    height: 30%;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    height: auto;
+}
+.login input {
+    height: 2.5em;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 1em;
+    margin: 0.5em;
+    padding-left: 1em;
+}
+.login button {
+    background-color: rgb(228, 11, 11);
+    font-size: 18px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    height: 2.5em;
+    width: 30%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 1em 0 1em 0;
+}
+.login button:hover{
+    background-color: rgb(207, 5, 5);
+    border: 2px black solid;
+}
+
+.logo img {
+    height: 6em;
+
+}
+
+/* Logo*/
+.logo {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.logo a  {
+    align-items: center;
+    display: flex;
+        margin: 1em 0 1em 0;
+}
+.logo h3 {
+    margin: 0;
+    height: 2em;
+}
+
+#msg {
+    height: 1.5em;
+}
+#msgL {
+    height: 1.5em;
+}
