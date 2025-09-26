@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Archivo Imperial - Registro</title>
+	<link rel="stylesheet" href="styles/style-main.css">
+	<link rel="stylesheet" href="styles/style-login.css">
+	<link rel="stylesheet" href="styles/media-styles.css">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+
+	<!--- Register user form --->
+	<div class="welcome-container">
+		<div class="login">
+			<div class="logo">
+				<a href="home.html"><img src="./img/icons/research.png" alt="Imperial logo" height="50"></a>	
+				<h3>Registro de nuevo usuario</h3>
+			</div>
+			<form method="POST">
+				<input name="newUser" id="newUser" type="text" placeholder="Usuario (debe de tener 6 caracteres exactamente)" required>
+				<input name="newPasswd" id="newPasswd" type="password" placeholder="Contraseña (debe contener 6 caracteres, una mayúscula y un número)" required>
+				<input name="newPasswdRpt" id="newPasswdRpt" type="password" placeholder="Repita la contraseña" required>
+				<button type="submit" id="loginSubmit" onclick="verifyNewRegister()">Registrarse</button>
+			</form>
+			<p id="msg" hidden></p>
+			<p>¿Ya te uniste a la causa? <a href="login.html">Ingresa</a></p>
+		</div>
+		<!-- Image -->
+		<div class="welcome-banner">
+			<img src="img/tower.gif" alt="Base de Archivos de Scariff" height="600">
+		</div>
+	</div>
+	<script src="src/logic.js"></script>
+	<script src="src/register.js"></script>
+</body>
+</html>
