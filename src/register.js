@@ -4,15 +4,15 @@ let newPasswdRpt = document.getElementById("newPasswdRpt");
 let message = document.getElementById("msg");
 
 //checker for checking
-let checkUser = false;
-let checkPasswd = false;
+let isUserChecked = false;
+let isPasswdChecked = false;
 
 function verifyNewRegister() {
-    if(!userExist(newUser.value) || !checkUser){
+    if(!userExist(newUser.value) || !isUserChecked){
         message.textContent = "EL usuario ya existe o es inválido";
     }
     //user doesnt exist & is OK
-    else if (checkUser && checkPasswd) {
+    else if (isUserChecked && isPasswdChecked) {
         //total users adds a key value to know if it exists
         localStorage.addItem("regUser" + totalUsers, newUser.value);
         localStorage.addItem("regPasswd" + totalUsers, encrPasswd(newPasswd.value));
@@ -32,7 +32,7 @@ newUser.addEventListener("input", (event) => {
     else {
         
         message.textContent = "";
-        checkUser = true;
+        isUserChecked = true;
     }
         
 });
@@ -48,7 +48,7 @@ newPasswd.addEventListener("input", (event) => {
     else {
         console.log(event.target.value + ">:D"); // test thing
         message.textContent = "";
-        checkPasswd = true;
+        isPasswdChecked = true;
     }
 }, false);
 
@@ -56,11 +56,11 @@ newPasswdRpt.addEventListener("input", (event) => {
     console.log(newPasswd.value);
     if(event.target.value === newPasswd.value)  {
         message = "";
-        checkPasswd = true;
+        isPasswdChecked = true;
     }
     else {
         message = "Las contraseñas deben de ser iguales";
-        checkPasswd = false;
+        isPasswdChecked = false;
     }
 });
 

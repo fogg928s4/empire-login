@@ -1,3 +1,46 @@
 .projects {
     display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.project-item img {
+    width:  22.5vh;
+    height: 22.5vh;
+    margin-bottom: 3vh;
+}
+
+.project-item {
+    display: block;
+    font-weight: bold;
+    height: fit-content;
+    background-color: antiquewhite;
+    margin: 2vh 2vh 2.5vh 2vh;
+    border-radius:  20px;
+}
+
+@media (min-width:900px) and (max-width: 1080px) {
+    .projects {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .project-item img {
+        width:  22.5vh;
+        height: 22.5vh;
+        margin-bottom: 3vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .projects {
+        display: block;
+    }
+    .project-item img {
+        width:  22.5vh;
+        height: 22.5vh;
+        margin-bottom: 3vh;
+    }
+
+    .projects h6 {
+        font-size: 1.5em;
+        margin: 5px 0px 5px 0px;
+    }
 }

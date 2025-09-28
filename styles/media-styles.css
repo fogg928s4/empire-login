@@ -23,10 +23,16 @@
         margin-top: 2em;
     }
 }
+
 @media (max-width: 900px) {
-    
+    .welcome-container {
+        display: flex;
+        background-image: url('../img/tower.gif');
+        height: 100%;  
+    }
     .login {
         margin: 2em;
+        height: 95%;
     }
     .login button {
         width: 180px;
@@ -34,9 +40,7 @@
     .login input {
         width: 275px;
     }
-    .welcome-container {
-        display: block;
-    }
+
     .welcome-banner {
         visibility: hidden;
         width: 0;

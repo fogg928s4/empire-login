@@ -13,6 +13,7 @@ const projects = document.getElementById("project-container");
 
 function fillProjectsGrid(){
     projectsInfo.forEach(item => {
-        projects.innerHTML += '<div class="project-item"> <h6>' + item.name + '</h6><img src="' + item.image + '"></img></div>';
+        projects.innerHTML += '<div class="project-item"> <h6>' + item.name + '</h6><img src="' + item.image + '" alt="' +item.name + '"></img></div>';
+       
     });
 }
