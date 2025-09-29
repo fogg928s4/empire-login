@@ -5,9 +5,12 @@ let msgL = document.getElementById("msgL"); //message in Login
 // checks if user & passwd match
 // if match returns the position, otherwise -1
 function verifyLogin() { 
-    for(let i = 0; i < countUsers(); i++) { 
-        if (localStorage.getItem("regUser" + i) == userField.value) {
-           return (localStorage.getItem("regPasswd" + position) == encrPasswd(passwdField.value)) ? i :-1;
+    regUsers = JSON.parse(localStorage.getItem("regUsers"));
+    totalUsers= countUsers();
+    for(let i = 0; i < totalUsers; i++) { 
+        if ((regUsers[i].username === userField.value) && (regUsers[i].passwd === encrPasswd(passwdField.value))) {
+            //user exists, return index
+            return i;
         }
     }
     return -1;
@@ -15,21 +18,27 @@ function verifyLogin() {
 
 let loggedUser = "";
 function displayMessage() {
-    
-    if(verifyLogin() != -1) {
-        loggedUser = new UserInfo(userField.value, verifyLogin());
-        localStorage.setItem("userInfo", loggedUser);
-        window.location.replace("./home.html");  // redirect to home
+    let i = verifyLogin();
+    if(i != -1) {
+        loggedUser = regUsers[i];
+        localStorage.setItem("userInfo", JSON.stringify(loggedUser));
+        window.location.assign("./home.html");  // redirect to home
     }
     else {
         msgL.hidden = false;
         msgL.textContent = "Wrong password or username";
-
     }
 }
-let testingUser = new UserInfo(0, "krennic");
-// load in a test user
+/*let testingUser = new UserInfo(0, "krennic");
+// load in a test user*/
 window.addEventListener("load", function(e) {
-	localStorage.setItem("regUser0", testingUser.username);
-	localStorage.setItem("regPasswd0", encrPasswd("Hola123"));
+    let inititalUsers = [
+        { "username": "krennic", "passwd": encrPasswd("Hola123")},
+        { "username": "dooku8", "passwd": encrPasswd("Geonosis22")}
+    ];
+    localStorage.setItem("regUsers", JSON.stringify(inititalUsers));
+    if(localStorage.getItem("userInfo") !== null)
+        window.location.replace("./home.html");
 });
+
+

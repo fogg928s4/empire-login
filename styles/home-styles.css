@@ -1,20 +1,35 @@
+body {
+    height: fit-content;
+}
 .projects {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    padding-right: 10%;
+    padding-left: 10%;
+    color: white;
+    height: 80%;
 }
 .project-item img {
     width:  22.5vh;
     height: 22.5vh;
     margin-bottom: 3vh;
+    border-radius:  20px;
 }
-
+.project-item h5 {
+    width: 22.5vh;
+}
 .project-item {
-    display: block;
-    font-weight: bold;
+    display: flex;
+    flex-flow: column nowrap;
     height: fit-content;
-    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 45, 78);
     margin: 2vh 2vh 2.5vh 2vh;
     border-radius:  20px;
+}
+.paginacion {
+    height: 20%;
 }
 
 @media (min-width:900px) and (max-width: 1080px) {

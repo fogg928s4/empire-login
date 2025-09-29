@@ -31,29 +31,36 @@ h3 {
 /* top banner*/ 
 .top-banner{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
     background-color:rgb(228, 8, 52);
     overflow: hidden;
     color: white;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     width: 100%;
-    height: 150px;
+    height: auto;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 .top-banner img {
-    height: 6em;        
+    height: 1.5em;      
+    margin: 0.2em 0.5em 0 4em; 
 }
-.title {
-    display: block;
-    align-items: center;
+
+.top-banner h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+    
 }
-.title h1{ 
-    margin: 0em 0vh 0em 0vh;
+.top-banner button {
+    background-color:rgba(0,0,0,0);
+    color: inherit;
+    margin: inherit;
+    border: inherit;
 }
-.title h5 {
-    margin: 0 0 1em 0;
+.top-banner button:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* pagina principal y main container*/

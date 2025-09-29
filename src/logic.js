@@ -1,9 +1,19 @@
 // check if user already exists
-
+let regUsers = JSON.parse(localStorage.getItem("regUsers"));
+let totalUsers = countUsers();
+function countUsers() {
+    if (localStorage.getItem("userCount") == null) {
+        localStorage.setItem("userCount", regUsers.length);
+        return regUsers.length;
+    }
+    else {
+        return Number(localStorage.getItem("userCount"));
+    }
+}
 
 function userExist(checkedUser) {
-    for(let i = 0; i < countUsers(); i++) { 
-        if (localStorage.getItem("regUser" + i) == checkedUser) {
+    for(let i = 0; i < totalUsers(); i++) { 
+        if (regUsers[i].usernam === checkedUser) {
             //user exists
             return true;
         }
@@ -27,14 +37,5 @@ function encrPasswd(base) {
     return encoded;
 }
 // total users registered
-let totalUsers;
-function countUsers() {
-    if (localStorage.getItem("userCount") == null) {
-        localStorage.setItem("userCount", "0");
-        return 0;
-    }
-    else {
-        return Number(localStorage.getItem("userCount"));
-    }
-}
+
 
