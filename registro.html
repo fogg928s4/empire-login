@@ -19,10 +19,10 @@
 				<h3>Registro de nuevo usuario</h3>
 			</div>
 			<form onsubmit="verifyNewRegister()">
-				<input name="newUser" id="newUser" type="text" placeholder="Usuario (debe de tener 6 caracteres exactamente)" required>
-				<input name="newPasswd" id="newPasswd" type="password" placeholder="Contraseña (debe contener 6 caracteres, una mayúscula y un número)" required>
+				<input name="newUser" id="newUser" type="text" placeholder="Usuario" required>
+				<input name="newPasswd" id="newPasswd" type="password" placeholder="Contraseña" required>
 				<input name="newPasswdRpt" id="newPasswdRpt" type="password" placeholder="Repita la contraseña" required>
-				<button type="submit" id="loginSubmit" onclick="verifyNewRegister()">Registrarse</button>
+				<button type="submit" id="regSubmit">Registrarse</button>
 			</form>
 			<p id="msg" hidden></p>
 			<p>¿Ya te uniste a la causa? <a href="login.html">Ingresa</a></p>

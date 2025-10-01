@@ -13,19 +13,25 @@
 <body>
 
 		<div class="top-banner">
-			<a href="home.html"><img src="./img/icons/research.png" alt="Imperial logo" ></a>
-			<div class="title">
-				<h1>Archivo Imperial - Base de Scariff</h1>
-				<h5>Bienvenido</h5>
-			</div>
+			
+			<a href="home.html">
+				<img src="./img/icons/research.png" alt="Imperial logo" >
+			</a>
+			<h4>Archivo Imperial</h4>
+			<button onclick="endSession()" id="cerrarSesion"><h4>| Cerrar sesión</h4></button>
 		</div>
 
 	<div class="projects" id="project-container">
 	</div>
+	<div class="paginacion">
+		<p id="pageNumber">Pagina 1</p>
+		<div class="pagControl">
+			
+		</div>
+	</div>
+	<script src="src/logic.js"></script>
 	<script src="src/data/projectinfo.js"></script>
-	<script src="src/userInfo.js"></script>
     <script src="src/home-logic.js"></script>
-    <script src="src/logic.js"></script>
-	<script src="src/logging.js"></script>
+	<script src="src/paginacion.js"></script>
 </body>
 </html>
