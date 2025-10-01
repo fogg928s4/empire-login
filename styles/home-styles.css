@@ -1,6 +1,40 @@
 body {
     height: fit-content;
 }
+.top-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(22, 45, 78);
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.top-banner img {
+    height: 1.5em;      
+    margin: 0.2em 0.5em 0 4em; 
+}
+
+.top-banner h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+    
+}
+.top-banner button {
+    background-color:rgba(0,0,0,0);
+    color: inherit;
+    margin: inherit;
+    border: inherit;
+}
+.top-banner button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*Projects container, that holds grid*/
 .projects {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;

@@ -1,17 +1,22 @@
-let newUser = document.getElementById("newUser");
-let newPasswd = document.getElementById("newPasswd");
-let newPasswdRpt = document.getElementById("newPasswdRpt");
+const regForm = document.getElementById("registerForm");
+const [newUser, newPasswd, newPasswdRpt] = regForm
 let message = document.getElementById("msg");
-let submitBtn = document.getElementById("regSubmit");
+
+// let newUser = document.getElementById("newUser");
+// let newPasswd = document.getElementById("newPasswd");
+// let newPasswdRpt = document.getElementById("newPasswdRpt");
+// let submitBtn = document.getElementById("regSubmit");
 
 //checker for checking
 let isUserChecked = false;
 let isPasswdChecked = false;
 
-submitBtn.addEventListener("click", verifyNewRegister);
+regForm.addEventListener("submit", verifyNewRegister);
 
-function verifyNewRegister() {
+function verifyNewRegister(event) {
+    event.preventDefault()
     regUsers = JSON.parse(localStorage.getItem("regUsers"));
+
     if(!isUserChecked){
         message.textContent = "El usuario ya existe o es inválido";
         localStorage.setItem("si", "no");
@@ -32,8 +37,7 @@ function verifyNewRegister() {
         localStorage.setItem("regUsers", JSON.stringify(regUsers));
 
         totalUsers = regUsers.length;
-        message.textContent("El usuario fue registrado con éxito. Bienvenido al Imperio.")
-        
+        message.textContent = "El usuario fue registrado con éxito. Bienvenido al Imperio.";
     }
 }
 
@@ -42,7 +46,7 @@ function verifyNewRegister() {
 newUser.addEventListener("input", (event) => {
     //const regExpUser = /\b\w{6,12}\b/g; <= que
     message.hidden = false;
-    if(event.target.value.length < 6 || event.target.value. length > 12) {
+    if(event.target.value.length < 6 || event.target.value.length > 12) {
         message.textContent = "El usuario debe de tener entre 6 y 12 caracteres";
         //console.log(encrPasswd(event.target.value)); small test
         isUserChecked = false;
