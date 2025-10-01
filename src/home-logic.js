@@ -1,19 +1,30 @@
 window.addEventListener("load", function(e) {
     //check if logged in & redirect
-    totalUsers = countUsers();
-    fillProjectsGrid();
+    
+    
     let logInCred = localStorage.getItem("userInfo");
-    /*if(logInCred === null) {
+    if(logInCred === null) {
+        //localStorage.setItem("queso", "cheese");
         window.location.replace("./login.html");
+        //localStorage.setItem("queso", "burger");
     }
-    */
-}, false);
+    else {
+        localStorage.setItem("queso", "macca");
+        fillProjectsGrid();
+       // e.preventDefault();
+    }
+   
+}, true);
 
 const projects = document.getElementById("project-container");
 
 function fillProjectsGrid(){
     projectsInfo.forEach(item => {
-        projects.innerHTML += '<div class="project-item"> <h6>' + item.name + '</h6><img src="' + item.image + '" alt="' +item.name + '"></img></div>';
-       
+        projects.innerHTML += '<div class="project-item"> <a href="' + item.link + '"> <h5>' + item.name + '</h5><img src="' + item.image + '" alt="' +item.name + '"></img></a></div>';       
     });
+}
+
+function endSession() {
+    localStorage.removeItem("userInfo");
+    window.location.replace("./login.html");
 }
