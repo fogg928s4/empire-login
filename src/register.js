@@ -1,5 +1,5 @@
 const regForm = document.getElementById("registerForm");
-const [newUser, newPasswd, newPasswdRpt] = regForm
+const [newUser, newPasswd, newPasswdRpt] = regForm;
 let message = document.getElementById("msg");
 
 // let newUser = document.getElementById("newUser");
@@ -11,10 +11,10 @@ let message = document.getElementById("msg");
 let isUserChecked = false;
 let isPasswdChecked = false;
 
-regForm.addEventListener("submit", verifyNewRegister);
+regForm.addEventListener("submit", verifyNewRegister, true);
 
 function verifyNewRegister(event) {
-    event.preventDefault()
+    
     regUsers = JSON.parse(localStorage.getItem("regUsers"));
 
     if(!isUserChecked){
@@ -23,9 +23,6 @@ function verifyNewRegister(event) {
     }
     //user doesnt exist & is OK
     else if (!isPasswdChecked) {
-        //total users adds a key value to know if it exists
-        //localStorage.setItem("regUser" + totalUsers, newUser.value);
-        //localStorage.setItem("regPasswd" + totalUsers, encrPasswd(newPasswd.value));
         message.textContent = "Las contraseñas no coinciden";
         localStorage.setItem("no", "si");
     }
@@ -91,5 +88,22 @@ newPasswdRpt.addEventListener("input", (event) => {
     }
 });
 
-
+window.addEventListener("load", function(e) {
+    let temp = localStorage.getItem("regUsers")
+    if(temp === null) {
+        let inititalUsers = [
+            { "username": "krennic", "passwd": encrPasswd("Hola123")},
+            { "username": "dooku8", "passwd": encrPasswd("Geonosis22")}
+        ];
+        localStorage.setItem("regUsers", JSON.stringify(inititalUsers));
+    }
+    else {
+        regUsers = JSON.parse(temp);
+        totalUsers = regUsers.length;
+        localStorage.setItem("userCount", totalUsers);
+    }
+    
+     if(localStorage.getItem("userInfo") !== null)
+        window.location.replace("./home.html");
+});
 

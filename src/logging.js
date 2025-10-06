@@ -1,35 +1,33 @@
-let userField = document.getElementById("user");
-let passwdField = document.getElementById("passwd");
+const userField = document.getElementById("user");
+const passwdField = document.getElementById("passwd");
 let msgL = document.getElementById("msgL"); //message in Login
 
+let checkUsers = [];
 // checks if user & passwd match
 // if match returns the position, otherwise -1
 function verifyLogin() { 
     regUsers = JSON.parse(localStorage.getItem("regUsers"));
-    totalUsers= regUsers.length;
-    for(let i = 0; i < totalUsers; i++) { 
-        if ((regUsers[i].username === userField.value) && (regUsers[i].passwd === encrPasswd(passwdField.value))) {
-            //user exists, return index
-            return i;
-        }
-    }
-    return -1;
+    checkUsers = regUsers.filter((a) => {
+        return (a.username === userField.value) && (a.passwd === encrPasswd(passwdField.value));
+    });
+    return checkUsers.length === 0;
+     
 }
 
-let loggedUser = "";
-function displayMessage() {
-    let i = verifyLogin();
-    if(i != -1) {
-        loggedUser = regUsers[i];
+function displayMessage(event) {
+    
+    let loggedUser = {};    
+    if(!verifyLogin()) {
+        loggedUser = checkUsers[0];
         localStorage.setItem("userInfo", JSON.stringify(loggedUser));
         window.location.assign("./home.html");  // redirect to home
     }
     else {
         msgL.hidden = false;
-        msgL.textContent = "Wrong password or username";
+        msgL.textContent = "Contraseña o usuario incorrecto";
     }
 }
-/*let testingUser = new UserInfo(0, "krennic");
+
 // load in a test user*/
 window.addEventListener("load", function(e) {
     let temp = localStorage.getItem("regUsers")
