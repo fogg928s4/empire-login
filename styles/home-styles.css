@@ -64,6 +64,12 @@ body {
 .project-item a {
     color: #000;
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;flex-direction: column;
 }
 .project-item h5 {
     width: 22.5vh;
