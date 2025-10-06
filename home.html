@@ -13,11 +13,19 @@
 <body>
 
 		<div class="top-banner">
+			
 			<a href="home.html">
 				<img src="./img/icons/research.png" alt="Imperial logo" >
 			</a>
 			<h4>Archivo Imperial</h4>
-			<button onclick="endSession()" id="cerrarSesion"><h4>| Cerrar sesión</h4></button>
+			<div class="acc-controls">
+				<button id="accManageBtn">
+					<img src="img/icons/account.png" alt="manage account icon">
+					
+				</button>
+				<button onclick="endSession()" id="cerrarSesion"><h4>| Cerrar sesión</h4></button>
+			</div>
+
 		</div>
 
 	<div class="projects" id="project-container">
@@ -29,8 +37,16 @@
 		</div>
 	</div>
 	<script src="src/logic.js"></script>
+	<div class="paginacion">
+		<p id="pageNumber">Pagina 1</p>
+		<div class="pagControl">
+			
+		</div>
+	</div>
+	<script src="src/logic.js"></script>
 	<script src="src/data/projectinfo.js"></script>
     <script src="src/home-logic.js"></script>
-	<script src="src/logging.js"></script>
+	<script src="src/paginacion.js"></script>
+	<script src="src/account-manage.js"></script>
 </body>
 </html>

@@ -1,18 +1,10 @@
 // check if user already exists
 let regUsers = JSON.parse(localStorage.getItem("regUsers"));
-let totalUsers = countUsers();
-function countUsers() {
-    if (localStorage.getItem("userCount") == null) {
-        localStorage.setItem("userCount", regUsers.length);
-        return regUsers.length;
-    }
-    else {
-        return Number(localStorage.getItem("userCount"));
-    }
-}
+let totalUsers = regUsers.length;
+
 
 function userExist(checkedUser) {
-    for(let i = 0; i < totalUsers(); i++) { 
+    for(let i = 0; i < totalUsers; i++) { 
         if (regUsers[i].usernam === checkedUser) {
             //user exists
             return true;

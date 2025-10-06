@@ -1,6 +1,40 @@
 body {
     height: fit-content;
 }
+.top-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(22, 45, 78);
+    overflow: hidden;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.top-banner img {
+    height: 1.5em;      
+    margin: 0.2em 0.5em 0 4em; 
+}
+
+.top-banner h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+    
+}
+.top-banner button {
+    background-color:rgba(0,0,0,0);
+    color: inherit;
+    margin: inherit;
+    border: inherit;
+}
+.top-banner button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*Projects container, that holds grid*/
 .projects {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -9,38 +43,65 @@ body {
     color: white;
     height: 80%;
 }
-.project-item img {
-    width:  22.5vh;
-    height: 22.5vh;
-    margin-bottom: 3vh;
-    border-radius:  20px;
-}
-.project-item h5 {
-    width: 22.5vh;
-}
+
 .project-item {
     display: flex;
     flex-flow: column nowrap;
     height: fit-content;
     justify-content: center;
     align-items: center;
-    background-color: rgb(22, 45, 78);
-    margin: 2vh 2vh 2.5vh 2vh;
+    background-color: #e0dddd;
+    
+    margin: 5vh 2vh 2.5vh 2vh;
     border-radius:  20px;
+}
+.project-item img {
+    width:  22.5vh;
+    height: 22.5vh;
+    margin-bottom: 3vh;
+    border-radius:  20px;
+}
+.project-item a {
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+}
+.project-item h5 {
+    width: 22.5vh;
+}
+
+.project-item:hover {
+    background-color: rgb(212, 212, 212);
+    cursor: pointer;
+}
+
+.paginacion {
+    height: 20%;
 }
 .paginacion {
     height: 20%;
 }
 
-@media (min-width:900px) and (max-width: 1080px) {
+@media (min-width:1080px) and (max-width: 1440px) {
     .projects {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 33% 33% 33%;
     }
     .project-item img {
         width:  22.5vh;
         height: 22.5vh;
         margin-bottom: 3vh;
+    }
+}
+@media(min-width: 900px) and (max-width: 1080px) {
+    .projects {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 }
 
@@ -49,8 +110,8 @@ body {
         display: block;
     }
     .project-item img {
-        width:  22.5vh;
-        height: 22.5vh;
+        width:  20vh;
+        aspect-ratio:1/1;
         margin-bottom: 3vh;
     }
 

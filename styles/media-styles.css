@@ -1,26 +1,27 @@
 @media (min-width:900px) and (max-width: 1080px) {
     .welcome-container{
-        display: block;
-
-    }
-    .welcome-banner img{
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 0px;
-    }
+        display: flex;
+        background-image: url('../img/tower.gif');
+        height: 100%;  
+        padding: 2em;
+        background-repeat:no-repeat;
+        background-size: cover;
+        }
+    
     .login {
-        width: 100%;
-        height: 50%;
+       margin: 4em;
+        height: 95%;
     }
     .welcome-banner {
-        width: 100%;
-        height: 50%;
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
     .logo {
         margin-top: 5vh;
     }
     .logo h3 {
-        margin-top: 2em;
+        margin-top: 1em;
     }
 }
 
@@ -29,18 +30,22 @@
         display: flex;
         background-image: url('../img/tower.gif');
         height: 100%;  
+        background-repeat:no-repeat;
+        background-size: cover;
     }
     .login {
-        margin: 2em;
-        height: 95%;
+        margin: 6em;
+        height: 80%;
     }
     .login button {
-        width: 180px;
+        width: 275px;
     }
     .login input {
         width: 275px;
     }
-
+    .logo h3 {
+        margin-top: 1.5em;
+    }
     .welcome-banner {
         visibility: hidden;
         width: 0;
