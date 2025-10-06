@@ -83,6 +83,9 @@ body {
 .paginacion {
     height: 20%;
 }
+.paginacion {
+    height: 20%;
+}
 
 @media (min-width:1080px) and (max-width: 1440px) {
     .projects {

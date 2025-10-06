@@ -11,6 +11,8 @@ let message = document.getElementById("msg");
 let isUserChecked = false;
 let isPasswdChecked = false;
 
+submitBtn.addEventListener("click", verifyNewRegister);
+
 regForm.addEventListener("submit", verifyNewRegister, true);
 
 function verifyNewRegister(event) {
@@ -67,6 +69,7 @@ newPasswd.addEventListener("input", (event) => {
     if(!regExPasswd.test(event.target.value)) {
         message.textContent = "La contraseña debe de incluir al menos una mayúscula, un número y al menos 6 caracteres";
         console.log(event.target.value);
+        isPasswdChecked = false;
         isPasswdChecked = false;
     }  // test whatever is being fed
     else {

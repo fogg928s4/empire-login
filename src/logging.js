@@ -47,5 +47,3 @@ window.addEventListener("load", function(e) {
      if(localStorage.getItem("userInfo") !== null)
         window.location.replace("./home.html");
 });
-
-
