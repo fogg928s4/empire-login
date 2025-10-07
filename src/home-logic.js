@@ -12,25 +12,15 @@ window.addEventListener("load", function(e) {
         loggedUser = JSON.parse(checkLoggedUser);
         localStorage.setItem("queso", "macca");
         fillProjectsGrid();
-        accManageBtn.textContent += loggedUser.username;
+        placeAccountBtn();
        // e.preventDefault();
     }
    
 }, true);
 
 const projects = document.getElementById("project-container");
-const accManageBtn = document.getElementById("accManageBtn");
 let loggedUser = {};
+const accManageLink = document.getElementById("accManageBtn");
 
-function fillProjectsGrid(){
-    projectsInfo.forEach(item => {
-        projects.innerHTML += '<div class="project-item"> <a href="' + item.link + '" target="_blank"> <h5>' + item.name + '</h5><img src="' + item.image + '" alt="' +item.name + '"></img></a></div>';       
-    });
-}
-
-function endSession() {
-    localStorage.removeItem("userInfo");
-    window.location.replace("./login.html");
-}
 
 //https://pw-docs.ctdesarrollo-sdr.org/sysadmin/monitoreo/
