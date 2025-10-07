@@ -1,6 +1,6 @@
 // check if user already exists
-let regUsers = JSON.parse(localStorage.getItem("regUsers"));
-let totalUsers = regUsers.length;
+regUsers = JSON.parse(localStorage.getItem("regUsers"));
+totalUsers = regUsers.length;
 
 
 function userExist(checkedUser) {

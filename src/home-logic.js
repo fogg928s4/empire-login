@@ -1,4 +1,4 @@
-document.getElementsByTagName("body").addEventListener("load", function(e) {
+window.addEventListener("load", function(e) {
     //check if logged in & redirect
     
     
