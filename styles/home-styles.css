@@ -73,7 +73,7 @@ header{
     height: 80%;
 }
 
-.project-item {
+.projectItem {
     display: flex;
     flex-flow: column nowrap;
     height: fit-content;
