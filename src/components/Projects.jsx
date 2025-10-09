@@ -1,4 +1,4 @@
-import { projectsInfo } from "/data/projectinfo";
+import { projectsInfo } from "../data/projectinfo";
 
 export default function ProjectsContainer()  {
     
