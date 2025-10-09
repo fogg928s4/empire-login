@@ -1,7 +1,7 @@
 @media (min-width:900px) and (max-width: 1080px) {
     .welcome-container{
         display: flex;
-        background-image: url('../img/tower.gif');
+        /*background-image: url('../img/tower.gif');*/
         height: 100%;  
         padding: 2em;
         background-repeat:no-repeat;
@@ -28,7 +28,7 @@
 @media (max-width: 900px) {
     .welcome-container {
         display: flex;
-        background-image: url('../img/tower.gif');
+        /*background-image: url('../img/tower.gif');*/
         height: 100%;  
         background-repeat:no-repeat;
         background-size: cover;
