@@ -1,5 +1,5 @@
 // check if user already exists
-regUsers = JSON.parse(localStorage.getItem("regUsers"));
+export let regUsers = JSON.parse(localStorage.getItem("regUsers"));
 totalUsers = regUsers.length;
 
 
@@ -28,22 +28,7 @@ function encrPasswd(base) {
     console.log(encoded);
     return encoded;
 }
-// total users registered
 
-
-//export function fillProjectsGrid(){
-//    projectsInfo.forEach(item => {
-//         += '<div class="project-item"> <a href="' + item.link + '" target="_blank"> <h5>' + item.name + '</h5><img src="' + item.image + '" alt="' +item.name + '"></img></a></div>';       
-//    });
-//}
-
-function placeAccountBtn() {
-        let accountUser = document.createElement("p");
-        accountUser.textContent = loggedUser.username;
-        accManageLink.appendChild(accountUser);
-        accManageLink.href= "./my-account.html";
-        
-}
 
 function endSession() {
     localStorage.removeItem("userInfo");

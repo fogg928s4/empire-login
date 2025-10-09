@@ -29,7 +29,6 @@ function verifyNewRegister(event) {
         localStorage.setItem("no", "si");
     }
     else {
-        localStorage.setItem("tal", "vez");
         let temp = { "username": newUser.value, "passwd": encrPasswd(newPasswd.value)};
         totalUsers = regUsers.push(temp);
         localStorage.removeItem("regUsers");

@@ -34,5 +34,10 @@ export const projectsInfo = [
         "name": "Chimera",
         "image": "/img/projects/chimera.png",
         "link": "https://starwars.fandom.com/wiki/Chimaera"
+    }, 
+    {
+        "name": "Dark Trooper",
+        "image": "/img/projects/dark-trooper.png",
+        "link": "https://starwars.fandom.com/wiki/Dark_Trooper"
     }
 ];

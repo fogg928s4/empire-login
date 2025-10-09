@@ -1,12 +1,6 @@
+import { projectsInfo } from "/data/projectinfo";
 
-'useClient';
-import { projectsInfo } from "../data/projectinfo";
-import React from 'react';
-
-
-// Capitalize component
-
-export function ProjectsContainer()  {
+export default function ProjectsContainer()  {
     
     return (
         <div className="project">
@@ -15,7 +9,6 @@ export function ProjectsContainer()  {
     )
     
 }
-
 function ProjectsCards() {
     return projectsInfo.map((project) => (
         <div className="projectItem" key={project.name}>
@@ -26,15 +19,3 @@ function ProjectsCards() {
         </div>
     ));
 }
-
-// Nested component
-export default function HomePage() {     
-     
-    return (
-        <ProjectsContainer/>
-    );
-}
-
-//root.render(<Header/>); // add tags
-
-
