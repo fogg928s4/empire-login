@@ -3,7 +3,7 @@ import { projectsInfo } from "../data/projectinfo";
 export default function ProjectsContainer()  {
     
     return (
-        <div className="project">
+        <div className="projects">
             <ProjectsCards/>
         </div>
     )

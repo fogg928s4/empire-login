@@ -1,7 +1,8 @@
 'useClient';
 import MainStyles from '../../../styles/style-main.css';
-import HomeStyles from '../../../styles/home-styles.css';
+import LogInStyles from '../../../styles/style-login.css';
 import MediaStyles from '../../../styles/media-styles.css';
+export {MainStyles, LogInStyles , MediaStyles};
 
 export const metadata = {
   title: 'Archivo Imperial',
@@ -9,9 +10,12 @@ export const metadata = {
 }
 
 export default function LogPageLayout({children}) {
-    return(<div className="login"> 
-        <TitleLogo/>
+    return(
+    <div className="welcome-container">
+        <div className="login"> 
+            <TitleLogo/>
             {children}
+        </div>
         <WelcomeBanner/>
     </div>
     )

@@ -84,13 +84,13 @@ header{
     margin: 5vh 2vh 2.5vh 2vh;
     border-radius:  20px;
 }
-.project-item img {
+.projectItem img {
     width:  60%;
     aspect-ratio: 1/ 1;
     margin-bottom: 3vh;
     border-radius:  20px;
 }
-.project-item a {
+.projectItem a {
     color: #000;
     text-decoration: none;
     width: 100%;
@@ -100,11 +100,11 @@ header{
     justify-content: center;
     align-items: center;flex-direction: column;
 }
-.project-item h5 {
+.projectItem h5 {
     width: 22.5vh;
 }
 
-.project-item:hover {
+.projectItem:hover {
     background-color: rgb(212, 212, 212);
     cursor: pointer;
 }
@@ -121,7 +121,7 @@ header{
         display: grid;
         grid-template-columns: 33% 33% 33%;
     }
-    .project-item img {
+    .projectItem img {
         width:  60%;
         height: 60%;
         margin-bottom: 3vh;
@@ -141,7 +141,7 @@ header{
     .projects {
         display: block;
     }
-    .project-item img {
+    .projectItem img {
         width:  20vh;
         aspect-ratio:1/1;
         margin-bottom: 3vh;
