@@ -11,18 +11,22 @@ export const metadata = {
 
 export default function LogPageLayout({children}) {
     return(
-    <div className="welcome-container">
+    <WelcomeContainer>
         <div className="login"> 
             <TitleLogo/>
             {children}
         </div>
         <WelcomeBanner/>
-    </div>
+    </WelcomeContainer>
     )
 }
 
-function WelcomeContainer() {
-
+function WelcomeContainer({children}) {
+    return (
+        <div className="welcome-container">
+            {children}
+        </div>
+    );
 }
 
 function TitleLogo() {
