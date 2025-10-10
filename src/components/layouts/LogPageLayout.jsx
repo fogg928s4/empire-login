@@ -3,6 +3,7 @@ import MainStyles from '../../../styles/style-main.css';
 import LogInStyles from '../../../styles/style-login.css';
 import MediaStyles from '../../../styles/media-styles.css';
 export {MainStyles, LogInStyles , MediaStyles};
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Archivo Imperial',
