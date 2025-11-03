@@ -1,4 +1,5 @@
 import { projectsInfo } from "../data/projectinfo";
+import Image from "next/image";
 
 export default function ProjectsContainer()  {
     
